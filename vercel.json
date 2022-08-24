@@ -4,12 +4,7 @@
     "builds": [{
         "src": "project/wsgi.py",
         "use": "@vercel/python"
-    },
-    {
-        "src":"build_files.sh",
-        "use": "@vercel/static-build"
-    }
-    ],
+    }],
     "routes":[{
         "headers":{
             "Access-Control-Allow-Origin": "*",
