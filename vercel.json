@@ -2,9 +2,14 @@
     "version": 2,
     "public": false,
     "builds": [{
-        "src": "/manage.py",
+        "src": "project/wsgi.py",
         "use": "@vercel/python"
-    }],
+    },
+    {
+        "src":"build_files.sh",
+        "use": "@vercel/static-build"
+    }
+    ],
     "routes":[{
         "headers":{
             "Access-Control-Allow-Origin": "*",
@@ -12,6 +17,6 @@
             "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
         },
         "src": "/.*",
-        "dest": "/manage.py"
+        "dest": "project/wsgi.py"
     }]
 }
