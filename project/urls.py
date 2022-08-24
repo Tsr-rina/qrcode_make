@@ -6,3 +6,4 @@ urlpatterns = [
     path('', include('qr_app.urls'))
 
 ]
+
