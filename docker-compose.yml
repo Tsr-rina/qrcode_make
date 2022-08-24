@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8034
+    ports:
+      - "8034:8034"
+    volumes:
+     - .:/app
